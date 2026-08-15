@@ -1,0 +1,22 @@
+# Windows build artifacts
+bin/
+obj/
+*.exe
+*.pdb
+*.user
+
+# Visual Studio
+.vs/
+*.suo
+*.sln.docstates
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor
+*.swp
+*~
+.idea/
+.vscode/settings.json
