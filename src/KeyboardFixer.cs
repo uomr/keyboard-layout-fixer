@@ -268,6 +268,8 @@ namespace KeyboardFixer
                 string backup = SafeGetClipboard();
                 Clipboard.Clear();
 
+                bool usedWmCopy = false;
+
                 // 3. Try Ctrl+C first
                 keybd_event(VK_CTRL, 0, 0, UIntPtr.Zero);
                 keybd_event(VK_C, 0, 0, UIntPtr.Zero);
@@ -289,6 +291,7 @@ namespace KeyboardFixer
                     SendMessage(hTarget, WM_COPY, IntPtr.Zero, IntPtr.Zero);
                     Thread.Sleep(50);
                     selected = SafeGetClipboard();
+                    if (!string.IsNullOrEmpty(selected)) usedWmCopy = true;
                 }
 
                 if (string.IsNullOrEmpty(selected))
@@ -309,18 +312,18 @@ namespace KeyboardFixer
                 SafeSetClipboard(converted);
                 Thread.Sleep(40);
 
-                // 6. Try Ctrl+V paste
-                keybd_event(VK_CTRL, 0, 0, UIntPtr.Zero);
-                keybd_event(VK_V, 0, 0, UIntPtr.Zero);
-                Thread.Sleep(35);
-                keybd_event(VK_V, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);
-                keybd_event(VK_CTRL, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);
-
-                // Fallback for legacy controls: Send WM_PASTE directly
-                if (hTarget != IntPtr.Zero)
+                // 6. Paste (mutually exclusive to avoid double-pasting)
+                if (usedWmCopy && hTarget != IntPtr.Zero)
                 {
-                    Thread.Sleep(30);
                     SendMessage(hTarget, WM_PASTE, IntPtr.Zero, IntPtr.Zero);
+                }
+                else
+                {
+                    keybd_event(VK_CTRL, 0, 0, UIntPtr.Zero);
+                    keybd_event(VK_V, 0, 0, UIntPtr.Zero);
+                    Thread.Sleep(35);
+                    keybd_event(VK_V, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);
+                    keybd_event(VK_CTRL, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);
                 }
 
                 // 7. Restore original clipboard
