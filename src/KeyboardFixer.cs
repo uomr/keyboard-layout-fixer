@@ -226,6 +226,8 @@ namespace KeyboardFixer
         // ── Release all modifier keys ───────────────────────────────────────
         static void ReleaseModifiers()
         {
+            // Press VK_CTRL briefly before releasing Alt to prevent Windows from activating the window menu bar (SC_KEYMENU)
+            keybd_event(VK_CTRL,  0, 0, UIntPtr.Zero);
             keybd_event(VK_ALT,   0, KEYEVENTF_KEYUP, UIntPtr.Zero);
             keybd_event(VK_CTRL,  0, KEYEVENTF_KEYUP, UIntPtr.Zero);
             keybd_event(VK_SHIFT, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);
@@ -283,6 +285,24 @@ namespace KeyboardFixer
                     Thread.Sleep(25);
                     selected = SafeGetClipboard();
                     if (!string.IsNullOrEmpty(selected)) break;
+                }
+
+                // Retry Ctrl+C if first attempt was too fast for web app / browser input
+                if (string.IsNullOrEmpty(selected))
+                {
+                    Thread.Sleep(50);
+                    keybd_event(VK_CTRL, 0, 0, UIntPtr.Zero);
+                    keybd_event(VK_C, 0, 0, UIntPtr.Zero);
+                    Thread.Sleep(35);
+                    keybd_event(VK_C, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);
+                    keybd_event(VK_CTRL, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);
+
+                    for (int i = 0; i < 15; i++)
+                    {
+                        Thread.Sleep(25);
+                        selected = SafeGetClipboard();
+                        if (!string.IsNullOrEmpty(selected)) break;
+                    }
                 }
 
                 // Fallback for legacy ERP controls: Send WM_COPY directly to focused window handle
