@@ -2,13 +2,19 @@
 
 # ⌨️ KeyboardFixer — مصحّح لوحة المفاتيح العربي/الإنجليزي
 
-**أداة نظام خفية تعمل في الخلفية على Windows، تحوّل النص الذي كتبته بالغلط من لغة إلى أخرى بضغطة زر واحدة.**
+**أداة نظام خفية وسريعة على Windows، تحوّل النص الذي كتبته بالخطأ من لغة إلى أخرى بضغطة زر واحدة.**
+
+<p align="center">
+  <a href="https://windhawk.net/mods/arabic-keyboard-layout-fixer"><img src="https://img.shields.io/badge/Windhawk_Mod-v1.3.1-007acc?style=for-the-badge&logo=windows" alt="Windhawk Mod v1.3.1" /></a>
+  <a href="https://github.com/uomr/keyboard-layout-fixer/releases"><img src="https://img.shields.io/badge/Standalone-v1.0.0-2ea44f?style=for-the-badge" alt="Standalone v1.0.0" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License" /></a>
+</p>
 
 ---
 
 ## 🎯 المشكلة التي تحلّها
 
-هل حدث لك هذا؟
+هل حدث لك هذا من قبل؟
 
 ```
 أردت أن تكتب: السلام عليكم
@@ -21,13 +27,19 @@
 فكتبت:         هيممخ صخقمي
 ```
 
-**KeyboardFixer** يصلح هذا فوراً، في أي تطبيق، بدون أي تدخل إضافي.
+**KeyboardFixer** يصلح هذا فوراً وبدقة، في أي نافذة أو تطبيق، دون الحاجة لحذف ما كتبته وإعادة كتابته!
 
 ---
 
 </div>
 
 ## 📺 Demo
+
+<div align="center">
+
+![KeyboardFixer Demo](demo.gif)
+
+</div>
 
 ```
 قبل التحويل:    hghsghl ugd;l
@@ -45,85 +57,78 @@ After:     hghsghl ugd;l td i`h hgughl hg[ldg
 
 <div dir="rtl">
 
-## ✨ المميزات
+## ✨ المميزات الرئيسية
 
 | الميزة | التفاصيل |
 |--------|----------|
-| 🌍 **يعمل في كل مكان** | Notepad، Word، Chrome، VS Code، WhatsApp Web، برامج ERP القديمة |
-| ⚡ **آني** | التحويل يحدث في أقل من 200ms |
-| 🧠 **ذكي** | يكتشف اتجاه التحويل تلقائياً (AR→EN أو EN→AR) |
-| 🔡 **يتعامل مع Caps Lock** | يصلح الأحرف الكبيرة المكتوبة بالخطأ تلقائياً |
-| 🔢 **لا يمس الأرقام والرموز** | `123 !@#` تمر بدون تغيير |
-| 🏭 **يدعم برامج ERP** | يستخدم Win32 Messages للبرامج القديمة |
-| 🔇 **خفي تماماً** | يعمل في System Tray فقط، بدون نوافذ |
-| 🚀 **يبدأ مع Windows** | يسجل نفسه تلقائياً في Registry |
-| 📦 **صغير الحجم** | EXE واحد أقل من 100KB، بدون تثبيت |
+| 🌍 **يعمل في كل مكان** | Notepad، Word، Chrome، VS Code، WhatsApp Web، وبرامج ERP القديمة |
+| ⚡ **فائق السرعة** | التحويل يتم آنيًا في أقل من 50ms |
+| 🧠 **كشف تلقائي للاتجاه** | يكتشف لغة النص تلقائيًا ويحولها (عربي ← إنجليزي أو إنجليزي ← عربي) |
+| 🔤 **معالجة متقدمة لـ (لا)** | يدعم كافة أشكال اللام-ألف المتصلة والمنفصلة (لا، لأ، لإ، لآ) |
+| 🔡 **يتعامل مع Caps Lock** | يعالج الأحرف الكبيرة المكتوبة بالخطأ تلقائيًا |
+| 🔢 **حماية الأرقام والرموز** | الأرقام والرموز الشائعة تمر دون أي تشويه |
+| 🔇 **خفيف وخفي** | لا يستهلك موارد الجهاز إطلاقًا ويعمل بصمت في الخلفية |
 
 ---
 
-## ⌨️ اختصارات لوحة المفاتيح
+## 🚀 طرق التثبيت والاستخدام
 
-| الاختصار | الوظيفة |
-|----------|---------|
-| `Alt + Z` | تحويل النص المظلل |
-| `Ctrl + Shift + X` | بديل في حالة تعارض Alt+Z |
+### 🥇 الخيار الأول: عبر متجر Windhawk الرسمي (موصى به بشدة ⭐)
+
+الأداة معتمدة ومنشورة رسميًا في متجر **Windhawk Mods**:
+1. قم بتثبيت [Windhawk](https://windhawk.net/) إن لم يكن لديك.
+2. توجّه إلى تبويب **استكشاف (Explore)** وابحث عن:
+   `Arabic Keyboard Layout Fixer`
+   أو افتح الرابط المباشر: [windhawk.net/mods/arabic-keyboard-layout-fixer](https://windhawk.net/mods/arabic-keyboard-layout-fixer)
+3. اضغط **تفاصيل (Details)** ثم **تثبيت (Install)**.
+4. مبروك! الأداة تعمل الآن مدى الحياة في الخلفية عبر `Alt + Z`.
 
 ---
 
-## 🚀 التثبيت السريع (خطوتان فقط)
+### 🥈 الخيار الثاني: التطبيق المستقل (Standalone C# — بدون Windhawk)
 
-### الخطوة 1 — تنزيل وبناء
-
-**أسهل طريقة (PowerShell — بنقرة واحدة):**
+**التثبيت الآلي السريع بنقرة واحدة (PowerShell):**
 
 ```powershell
-# افتح PowerShell كمستخدم عادي (بدون Admin) ثم انسخ هذا الأمر:
+# افتح PowerShell (بدون الحاجة لصلاحيات مسؤول) والصق الأمر التالي:
 Set-ExecutionPolicy -Scope CurrentUser Bypass -Force
-git clone https://github.com/YOUR_USERNAME/keyboard-layout-fixer.git
+git clone https://github.com/uomr/keyboard-layout-fixer.git
 cd keyboard-layout-fixer
 .\build.ps1 -Install
 ```
 
 هذا الأمر سيقوم تلقائياً بـ:
 - ✅ بناء الملف التنفيذي `KeyboardFixer.exe`
-- ✅ نسخه إلى مجلد دائم في جهازك
-- ✅ تسجيله ليبدأ مع Windows
-- ✅ إنشاء اختصار على سطح المكتب
-- ✅ تشغيله فوراً
+- ✅ نقله إلى مجلد التطبيقات الآمن على جهازك
+- ✅ تشغيله مع بدء Windows
+- ✅ إنشاء اختصار تشغيل وتفعيله فورًا
 
 ---
 
-### الخطوة 2 — التحقق من التثبيت
+## ⌨️ اختصارات الاستخدام
 
-بعد التثبيت ستلاحظ:
-- 🔔 إشعار في أسفل يمين الشاشة: *"مصحح الكيبورد يعمل"*
-- ⌨️ أيقونة صغيرة بجانب الساعة في System Tray
-
-**الاختبار السريع:**
-1. افتح المفكرة (Notepad)
-2. اكتب: `hghsghl ugd;l`
-3. ظلل النص
-4. اضغط **`Alt + Z`**
-5. يتحول فوراً إلى: **`السلام عليكم`** 🎉
+| الاختصار | الوظيفة |
+|----------|---------|
+| `Alt + Z` | تحويل النص المظلل فورًا |
+| `Ctrl + Shift + X` | اختصار بديل مدمج في حال تعارض Alt+Z مع تطبيق مخصص |
 
 ---
 
-## 🏗️ البناء يدوياً (للمطورين)
+## 🏗️ البناء يدوياً من المصدر (للمطورين)
 
 **المتطلبات:**
-- Windows 7 / 10 / 11
-- .NET Framework 4.x (مثبت افتراضياً على كل Windows)
-- لا يحتاج Visual Studio
+- Windows 10 / 11
+- .NET Framework 4.x (مدمج افتراضيًا في النظام)
 
 ```powershell
-# بناء فقط (بدون تثبيت)
+# للبناء فقط:
 .\build.ps1
 
-# بناء + تثبيت + تشغيل
+# للبناء والتثبيت والتشغيل المباشر:
 .\build.ps1 -Install
 ```
 
-الملف الناتج: `bin\KeyboardFixer.exe`
+الملف الناتج يظهر في: `bin\KeyboardFixer.exe`
 
 ---
 
@@ -132,114 +137,57 @@ cd keyboard-layout-fixer
 ```
 keyboard-layout-fixer/
 │
+├── demo.gif                   # العرض التوضيحي المتحرك
 ├── src/
-│   └── KeyboardFixer.cs       # كل الكود في ملف واحد
+│   └── KeyboardFixer.cs       # الكود المصدري المستقل (C# / Win32 API)
 │
 ├── docs/
-│   └── keyboard-map.md        # خريطة كاملة للمفاتيح AR/EN
+│   └── keyboard-map.md        # خريطة تحويل المفاتيح العربية والإنجليزية
 │
-├── bin/                       # (مجلد مُولَّد — لا يُرفع لـ GitHub)
-│   └── KeyboardFixer.exe
-│
-├── build.ps1                  # سكريبت البناء والتثبيت
-├── .gitignore
-├── LICENSE                    # MIT
+├── build.ps1                  # سكريبت الأتمتة والبناء
+├── CONTRIBUTING.md             # إرشادات المساهمة والتطوير
+├── LICENSE                    # رخصة MIT
 └── README.md
-```
-
----
-
-## ⚙️ كيف تعمل الأداة من الداخل
-
-```
-المستخدم يضغط Alt+Z
-        │
-        ▼
-SetWindowsHookEx (WH_KEYBOARD_LL)
-يعترض الضغطة على مستوى النظام
-        │
-        ▼
-تحرير كل مفاتيح التعديل (Alt, Ctrl, Shift)
-        │
-        ▼
-محاولة 1: Ctrl+C (نسخ التحديد)
-        │
-        ▼ فشل? (برامج ERP/Legacy)
-محاولة 2: WM_COPY مباشرة للنافذة المُفعّلة
-(عبر AttachThreadInput + SendMessage)
-        │
-        ▼
-خوارزمية التحويل الذكية:
-  - تحليل النص: هل غالبيته عربي أم إنجليزي؟
-  - تطبيق خريطة المفاتيح بالكامل
-  - معالجة Caps Lock التلقائية
-  - الحفاظ على الأرقام والرموز
-        │
-        ▼
-وضع النص المحوّل في الحافظة (Clipboard)
-        │
-        ▼
-محاولة 1: Ctrl+V (لصق)
-محاولة 2: WM_PASTE للنافذة مباشرة
-        │
-        ▼
-استعادة محتوى الحافظة الأصلي
-+ صوت تأكيد
 ```
 
 ---
 
 ## 🔒 الخصوصية والأمان
 
-- **لا اتصال بالإنترنت** — الأداة تعمل محلياً بالكامل
-- **لا تسجيل للضغطات** — الـ Hook يراقب فقط اختصار `Alt+Z`
-- **لا قاعدة بيانات** — لا ملفات إضافية، ملف EXE واحد فقط
-- **مفتوح المصدر** — يمكنك مراجعة كل سطر من الكود
+- **يعمل محليًا 100%** — دون أي اتصال بالإنترنت أو إرسال بيانات.
+- **لا تسجيل للضغطات (Zero Keylogging)** — الأداة تستمع فقط لاختصار التحويل.
+- **مفتوح المصدر بالكامل** — كل سطر برمجي متاح للمعاينة والتدقيق.
 
 ---
 
-## 🛠️ إزالة التثبيت (Uninstall)
+## 🛠️ إزالة التثبيت (للتطبيق المستقل)
 
 ```powershell
-# إلغاء التسجيل من بدء التشغيل
 Remove-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" -Name "KeyboardFixer" -ErrorAction SilentlyContinue
-
-# حذف الملفات
 Remove-Item "$env:LOCALAPPDATA\KeyboardFixer" -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item "$env:USERPROFILE\Desktop\KeyboardFixer.lnk" -Force -ErrorAction SilentlyContinue
-
-Write-Host "✅ Uninstalled successfully"
+Write-Host "✅ تم حذف الأداة بالكامل بنجاح"
 ```
 
 ---
 
-## 🗺️ خريطة المفاتيح الكاملة
+## خارطة الطريق والمساهمة
 
-[📄 انظر docs/keyboard-map.md](docs/keyboard-map.md)
+المساهمات مرحب بها دائمًا! راجع [CONTRIBUTING.md](CONTRIBUTING.md).
 
----
-
-## 🤝 المساهمة
-
-المساهمات مرحب بها! انظر [CONTRIBUTING.md](CONTRIBUTING.md)
-
-**أفكار للتطوير المستقبلي:**
-- [ ] دعم لغات إضافية (فارسي، أردو)
-- [ ] إعدادات قابلة للتخصيص عبر واجهة رسومية
-- [ ] تغيير الاختصار من الإعدادات
-- [ ] إحصائيات عدد مرات الاستخدام
-- [ ] تثبيت عبر `winget`
+- [x] إطلاق النسخة الرسمية على متجر Windhawk (الإصدار v1.3.1)
+- [x] إضافة العرض التوضيحي المتحرك (Interactive Demo GIF)
+- [ ] دعم لغات ثنائية الاتجاه إضافية (العبرية، الأوردو)
+- [ ] واجهة رسومية خفيفة لتخصيص مفاتيح الاختصار
 
 ---
 
 ## 📄 الرخصة
 
-[MIT](LICENSE) © 2026
-
----
+مرخص تحت رخصة [MIT](LICENSE) © 2026.
 
 <div align="center">
 
-**إذا أفادتك الأداة، ضع ⭐ على المستودع!**
+⭐ **إذا نالت الأداة إعجابك، لا تنسَ وضع نجمة على المستودع!** ⭐
 
 </div>
